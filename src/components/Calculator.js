@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Key from './Key';
 import Output from './Output';
@@ -33,3 +34,4 @@ class Calculator extends React.Component {
 }
 
 export default Calculator;
+/* eslint-enable no-unused-vars */
