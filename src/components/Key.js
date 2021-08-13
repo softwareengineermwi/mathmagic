@@ -6,4 +6,4 @@ class Key extends React.Component {
   }
 }
 
-export default Key
+export default Key;

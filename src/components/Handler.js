@@ -1,3 +1,3 @@
 const Handler = () => { };
 
-export default Handler
+export default Handler;

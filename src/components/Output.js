@@ -10,4 +10,4 @@ class Output extends React.Component {
   }
 }
 
-export default Output
+export default Output;

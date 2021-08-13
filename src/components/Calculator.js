@@ -1,7 +1,7 @@
 import React from 'react';
-import { Key } from './Key';
-import { Output } from './Output';
-import { Handler } from './Handler';
+import Key from './Key';
+import Output from './Output';
+import Handler from './Handler';
 
 class Calculator extends React.Component {
   render() {
@@ -32,4 +32,4 @@ class Calculator extends React.Component {
   }
 }
 
-export default Calculator
+export default Calculator;
