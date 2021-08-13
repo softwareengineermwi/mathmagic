@@ -1,0 +1,3 @@
+const Handler = () => { }
+
+export { Handler }
