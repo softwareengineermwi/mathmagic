@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Key from './Key'
+import Key from './Key';
 
-const Input = ({ handler }) => {
-  return (<div className="grid col-12">
+const Input = ({ handler }) => (
+  <div className="grid col-12">
     <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="AC" />
     <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="+/-" />
     <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="%" />
@@ -24,11 +24,14 @@ const Input = ({ handler }) => {
     <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="." />
     <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md foo" name="=" />
   </div>
-  );
-}
+);
 
 Input.propTypes = {
-  handler: PropTypes.func
+  handler: PropTypes.func,
 };
 
-export default Input
+Input.defaultProps = {
+  handler: PropTypes.func,
+};
+
+export default Input;
