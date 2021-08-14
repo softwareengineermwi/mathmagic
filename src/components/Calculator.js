@@ -3,10 +3,9 @@ import React from 'react';
 import Output from './Output';
 import Input from './Input';
 import calculate from '../logic/calculate';
-import { useState } from 'react';
 
 const Calculator = () => {
-  const [state, setState] = useState({
+  const [state, setState] = React({
     total: null,
     next: null,
     operation: null,
@@ -17,7 +16,7 @@ const Calculator = () => {
   };
 
   const { next, total } = state;
-  
+
   return (
     <div className="grid container max-width-sm">
       <Output value={next || total || '0'} />
