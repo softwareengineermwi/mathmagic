@@ -1,31 +1,34 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Key from './Key'
 
-export default class Input extends React.Component {
-  render() {
-    return (<div className="grid col-12">
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="AC" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="+/-" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="%" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md foo" name="÷" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="7" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="8" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="9" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md foo" name="x" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="4" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="5" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="6" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md foo" name="-" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="1" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="2" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="3" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md foo" name="+" />
-      <Key clickHandler={this.props.handler} classes="col-6 btn btn--subtle padding-y-md" name="0" />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md" name="." />
-      <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md foo" name="=" />
-    </div>
-    );
-  }
+const Input = ({ handler }) => {
+  return (<div className="grid col-12">
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="AC" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="+/-" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="%" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md foo" name="÷" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="7" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="8" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="9" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md foo" name="x" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="4" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="5" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="6" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md foo" name="-" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="1" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="2" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="3" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md foo" name="+" />
+    <Key handler={handler} classes="col-6 btn btn--subtle padding-y-md" name="0" />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md" name="." />
+    <Key handler={handler} classes="col-3 btn btn--subtle padding-y-md foo" name="=" />
+  </div>
+  );
 }
-/* eslint-enable no-unused-vars */
+
+Input.propTypes = {
+  handler: PropTypes.func
+};
+
+export default Input
