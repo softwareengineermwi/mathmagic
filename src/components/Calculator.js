@@ -1,33 +1,30 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Key from './Key';
 import Output from './Output';
-import Handler from './Handler';
+import Input from './Input';
+import calculate from '../logic/calculate';
+import { useState } from 'react';
 
-class Calculator extends React.Component {
-  render = () => <div className="grid container max-width-sm">
-    <Output value={0} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'AC'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'+/-'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'%'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md foo'} name={'÷'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'7'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'8'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'9'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md foo'} name={'x'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'4'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'5'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'6'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md foo'} name={'-'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'1'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'2'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'3'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md foo'} name={'+'} />
-    <Key clickHandler={Handler} classes={'col-6 btn btn--subtle padding-y-md'} name={'0'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md'} name={'.'} />
-    <Key clickHandler={Handler} classes={'col-3 btn btn--subtle padding-y-md foo'} name={'='} />
-  </div>;
-}
+const Calculator = () => {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const handleClick = (e) => {
+    setState({ ...state, ...calculate(state, e.target.innerText) });
+  };
+
+  const { next, total } = state;
+  
+  return (
+    <div className="grid container max-width-sm">
+      <Output value={next || total || '0'} />
+      <Input handler={handleClick} />
+    </div>
+  );
+};
 
 export default Calculator;
-/* eslint-enable no-unused-vars */
+// /* eslint-enable no-unused-vars */
