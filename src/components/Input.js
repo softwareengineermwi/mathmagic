@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Key from './Key';
+import Key from './Key'
 
 export default class Input extends React.Component {
   render() {
@@ -26,6 +26,6 @@ export default class Input extends React.Component {
       <Key clickHandler={this.props.handler} classes="col-3 btn btn--subtle padding-y-md foo" name="=" />
     </div>
     );
-  };
+  }
 }
 /* eslint-enable no-unused-vars */
