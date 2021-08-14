@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import Output from './Output';
 import Input from './Input';
@@ -26,4 +25,3 @@ const Calculator = () => {
 };
 
 export default Calculator;
-// /* eslint-enable no-unused-vars */
