@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import Output from './Output';
 import Input from './Input';
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
-  const [state, setState] = React({
+  const [state, setState] = useState({
     total: null,
     next: null,
     operation: null,
