@@ -14,7 +14,7 @@ export default function operate(numberOne, numberTwo, operation) {
   }
   if (operation === '÷') {
     if (numberTwo === '0') {
-      return 'Can\'t divide by 0'
+      return 'Can\'t divide by 0';
     }
     return one.div(two).toString();
   }
