@@ -18,7 +18,7 @@ const App = () => (
           <div className="col-6">
             <h1>Math Magicians</h1>
           </div>
-          <div className="col-6 flex justify-end">
+          <nav className="col-6 flex justify-end">
             <ul>
               <li className="inline-block padding-x-xs border-right">
                 <Link to="/">Home</Link>
@@ -30,7 +30,7 @@ const App = () => (
                 <Link to="/quotes">Quote</Link>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </header>
 
